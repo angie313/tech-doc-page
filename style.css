@@ -1,36 +1,131 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Poppins:wght@300&family=Raleway:wght@600&display=swap&family=Ubuntu:wght@500&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+
 #navbar {
-  display: inline-block;
-  width: 30vw;
-  vertical-align: top;
-  padding: 10px;
+  height: 100%; 
+  width: 300px;
+  position: fixed;
+  /* z-index: 1;  */
+  top: 0; 
+  left: 0;
+  background-color: #111;
+  /* overflow-x: hidden;  */
 }
+
 #navbar header {
-  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: 'Raleway', sans-serif;
+  padding: 50px 20px 10px 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid white;
 }
-#search-box {
-  border: 1px solid black;
-  border-radius: 0.3rem;
-  padding: 5px;
-  width: 80%;
-  margin: 15px 0;
-}
+
 #navbar a {
   display: block;
-  width: fit-content;
-  margin: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #9b9898;
+  text-transform: uppercase;
 }
+
+#navbar a:hover{
+  color: #fff;
+  margin-left: 20px;
+  transition: 0.4s;
+}
+
 #main-doc {
-  display: inline-block;
-  width: 60vw;
-  padding: 10px;
-  border-left: 2px solid black;
+  margin-left: 300px;
+  padding: 30px 20px 20px 20px;
+}
+
+.main-section {
+  margin-bottom: 40px;
+}
+
+#main-doc header{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 25px;
+  margin-bottom: 20px;
+
+}
+
+#main-doc p {
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+#main-doc ul {
+  padding-left: 50px;
+}
+
+#return_data ul, #other_methods ul {
+  margin-bottom: 10px;
+}
+
+.block-code{
+  background-color: #efefef;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  white-space: pre-wrap;
+  word-break: keep-all;
+  word-wrap: normal;
+  padding: 15px 10px 0px 15px;
+  margin: 10px;
 }
 
 @media (max-width: 720px) {
+  #navbar {
+    width: 100%; 
+    height: 200px;
+    padding-bottom: 10px;
+    position: fixed;
+    z-index: 1;
+    margin: 0;
+    top: 0; 
+    left: 0;
+    background-color: #111;
+  }
+  #navbar header {
+    color: white;
+    font-size: 35px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid white;
+  }
+  #navbar a {
+    display: inline;
+    float: left;
+    padding: 0 20px;
+    font-size: 20px;
+  }
+  #navbar .nav-link:hover{
+    color: #fff;
+    margin-left: 0;
+    transition: 0.4s;
+  }
+  #main-doc {
+    margin-left: 0;
+    margin-top: 200px;
+    padding: 30px 20px 20px 20px;
+  }
+  .main-section {
+    scroll-margin-top: 220px;
+  }
 }
